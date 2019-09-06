@@ -16,3 +16,6 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+//npm i --save apollo-angular apollo-client graphql-tag
