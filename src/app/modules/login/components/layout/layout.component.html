@@ -1,6 +1,10 @@
 <div class="container mt-5">
 
+    <div *ngIf="showMessage" class="alert alert-danger" role="alert">
+        NO SE HA ENCONTRADO AL USUARIO!! VERIFIQUE SU INFORMACION
+    </div>
     <div class="row justify-content-center">
+
 
 
         <form #loginForm="ngForm"
@@ -11,7 +15,7 @@
             <div class="form-group">
                 <label for="">Username:</label>
                 <input required class="form-control" type="text" name="user" placeholder="Nombre de Usuario"
-                    #user="ngModel" [(ngModel)]="username">
+                    #user="ngModel" [(ngModel)]="usuario.username">
 
                 <p class="input-err-12" *ngIf="user.hasError('required') && user.touched">
                     EL CAMPO DE USUARIO ES REQUERIDO!!
@@ -23,14 +27,15 @@
             <div class="form-group">
                 <label for="">Password:</label>
                 <input required class="form-control" type="password" name="psswrd" placeholder="Contraseña"
-                    #psswrd="ngModel" [(ngModel)]="password">
+                    #psswrd="ngModel" [(ngModel)]="usuario.password">
 
                 <p class="input-err-12" *ngIf="psswrd.hasError('required') && psswrd.touched">
                     EL PASSWORD ES UN CAMPO REQUERIDO!!!
                 </p>
             </div>
             <!--INPUT PASSWORD-->
-            <button type="submit" [disabled]="loginForm.invalid" class="btn btn-block btn-success">Ingresar</button>
+            <button type="submit" [disabled]="loginForm.invalid" class="btn btn-block btn-success"
+                (click)="btnIngresar()">Ingresar</button>
 
         </form>
         <!--COL-8-->

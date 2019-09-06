@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div class="text-center">
+        <h1 class="display-4 mt-5">PANEL DEL CONTROL</h1>
+        <button class="btn btn-outline-info" (click)="btnCerrarSesion()">Cerrar Sesion</button>
+
+    </div>
+
+    <div class="row justify-content-center mt-5">
+
+
+        <div class="col-12 col-md-4 text-center">
+            <img class="img-fluid rounded" src="data:image/jpeg;base64,{{user.persona.Foto}}" alt="">
+        </div>
+
+
+
+        <div class="col-12 col-md-8">
+
+            <h3 class="mt-3">Nombres:</h3>
+            <h5 class="display-4">
+                {{user.persona.primerNombre}}
+                {{user.persona.segundoNombre}}
+            </h5>
+
+            <h3 class="mt-3">Apellidos:</h3>
+            <h5 class="display-4">
+                {{user.persona.primerApellido}}
+                {{user.persona.segundoApellido}}
+            </h5>
+
+
+
+
+        </div>
+
+
+    </div>
+
+</div>
