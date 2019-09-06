@@ -1,0 +1,42 @@
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+
+        <form #loginForm="ngForm"
+            class="col-11 col-sm-10 col-md-8 col-lg-6 p-5 text-center text-dark rounded border border-dark">
+
+            <h1 class="display-4 mb-5">Login</h1>
+
+            <div class="form-group">
+                <label for="">Username:</label>
+                <input required class="form-control" type="text" name="user" placeholder="Nombre de Usuario"
+                    #user="ngModel" [(ngModel)]="username">
+
+                <p class="input-err-12" *ngIf="user.hasError('required') && user.touched">
+                    EL CAMPO DE USUARIO ES REQUERIDO!!
+                </p>
+
+            </div>
+            <!--INPUT USERNAME-->
+
+            <div class="form-group">
+                <label for="">Password:</label>
+                <input required class="form-control" type="password" name="psswrd" placeholder="Contraseña"
+                    #psswrd="ngModel" [(ngModel)]="password">
+
+                <p class="input-err-12" *ngIf="psswrd.hasError('required') && psswrd.touched">
+                    EL PASSWORD ES UN CAMPO REQUERIDO!!!
+                </p>
+            </div>
+            <!--INPUT PASSWORD-->
+            <button type="submit" [disabled]="loginForm.invalid" class="btn btn-block btn-success">Ingresar</button>
+
+        </form>
+        <!--COL-8-->
+
+    </div>
+    <!--ROW-->
+
+</div>
+<!--CONTAINER-->
