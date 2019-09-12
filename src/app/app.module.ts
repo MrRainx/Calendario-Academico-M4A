@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './modules/login/login.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { CalendarioModule } from './modules/calendario/calendario.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
     HttpClientModule,
     FormsModule,
     LoginModule,
-    DashboardModule
+    DashboardModule,
+    CalendarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

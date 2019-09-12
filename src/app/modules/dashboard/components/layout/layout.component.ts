@@ -29,7 +29,9 @@ export class LayoutComponent implements OnInit {
     this.loginSrv.LOGOUT()
     this.router.navigate(['login'])
   }
-
+  btnCalendario() {
+    this.router.navigate(['calendario'])
+  }
 }
 
 //ng g component modules/dashboard/components/layout --spec=false
