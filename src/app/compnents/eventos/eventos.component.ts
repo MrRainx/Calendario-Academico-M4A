@@ -19,7 +19,6 @@ export class EventosComponent implements OnInit {
   async ngOnInit() {
 
     this.eventos = await this.eventSrv.getAllEventos()
-    console.log(this.eventos);
   }
 
 }
