@@ -4,9 +4,9 @@
 
             <h1 class="display-4 text-center mt-5">Eventos</h1>
 
-            <ul class="list-group">
-                <li class="list-group-item" *ngFor="let eventos of eventos">
-                    {{evento.titulo}}
+            <ul class="list-group" *ngIf="eventos">
+                <li class="list-group-item" *ngFor="let item of eventos">
+                    {{item.titulo}}
                 </li>
             </ul>
         </div>

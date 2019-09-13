@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventosService } from '../../services/eventos.service';
+import { Eventos } from '../../models/Eventos';
 
 @Component({
   selector: 'app-eventos',
@@ -9,7 +10,7 @@ import { EventosService } from '../../services/eventos.service';
 export class EventosComponent implements OnInit {
 
 
-  public eventos;
+  public eventos:Eventos[] = [];
 
   constructor(
     private eventSrv: EventosService

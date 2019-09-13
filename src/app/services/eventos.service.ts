@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import gql from 'graphql-tag'
 import { Apollo } from 'apollo-angular';
+import { Eventos } from '../models/Eventos';
 const QUERY_ALL = gql`
 {
   eventos {
@@ -23,13 +24,13 @@ export class EventosService {
 
   ) { }
 
-  public async getAllEventos() {
+  public async getAllEventos():Promise<Eventos[]>{
 
     const query = await this.apollo.query({
       query: QUERY_ALL
     })
 
-    return (await query.toPromise()).data
+    return (await query.toPromise()).data['eventos']
 
   }
 }
