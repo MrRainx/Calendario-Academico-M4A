@@ -1,16 +1,10 @@
-<nav class="main-menu fixed-top" *ngIf="app.showNav">
-
-
-    <div class="text-center">
-        <img class="img-fluid" [src]="'data:image/jpeg;base64,'+ user.persona.Foto" alt="">
-    </div>
+<nav class="main-menu" *ngIf="app.showNav">
 
 
 
-
-    <ul>
-        <li>
-            <a href="http://justinfarrow.com">
+    <ul class="mt-5">
+        <li class="has-subnav">
+            <a routerLink="/dashboard">
                 <i class="fa fa-home fa-2x"></i>
                 <span class="nav-text">
                     Dashboard

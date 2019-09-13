@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Host } from '@angular/core';
+import { Component, OnInit, Host } from '@angular/core';
 import { LoginService } from '../../modules/login/services/login.service';
 import { AppComponent } from 'src/app/app.component';
 import { UserWeb } from '../../models/UserWeb';
@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
     private loginSrv: LoginService
   ) { }
 
-  async ngOnInit() {
+  ngOnInit() {
     this.user = this.loginSrv.getCurrentUser()
   }
 

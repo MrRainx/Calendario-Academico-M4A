@@ -11,6 +11,7 @@ import { AppComponent } from "./app.component";
 import { LoginModule } from "./modules/login/login.module";
 import { DashboardModule } from "./modules/dashboard/dashboard.module";
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CalendarioModule } from './modules/calendario/calendario.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -22,7 +23,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HttpClientModule,
     FormsModule,
     LoginModule,
-    DashboardModule
+    DashboardModule,
+    CalendarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
