@@ -12,9 +12,10 @@ import { LoginModule } from "./modules/login/login.module";
 import { DashboardModule } from "./modules/dashboard/dashboard.module";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CalendarioModule } from './modules/calendario/calendario.module';
+import { EventosComponent } from './compnents/eventos/eventos.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, NavbarComponent, EventosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
