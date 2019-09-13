@@ -1,98 +1,54 @@
-<div class="area">
-</div>
-<nav class="main-menu">
+<nav class="main-menu fixed-top" *ngIf="app.showNav">
+
+
+    <div class="text-center">
+        <img class="img-fluid" [src]="'data:image/jpeg;base64,'+ user.persona.Foto" alt="">
+    </div>
+
+
+
+
     <ul>
         <li>
             <a href="http://justinfarrow.com">
                 <i class="fa fa-home fa-2x"></i>
                 <span class="nav-text">
-                        Dashboard
-                    </span>
+                    Dashboard
+                </span>
             </a>
 
         </li>
-        <!--
-             <li class="has-subnav">
-            <a href="#">
-                <i class="fa fa-laptop fa-2x"></i>
-                <span class="nav-text">
-                        Stars Components
-                    </span>
-            </a>
-
-        </li>
-        -->
 
         <li class="has-subnav">
-            <a href="#">
+            <a routerLink="/calendario">
                 <i class="fa fa-list fa-2x"></i>
                 <span class="nav-text">
-                        Calendario
-                    </span>
+                    Calendario
+                </span>
             </a>
 
         </li>
-        <!--
-            <li class="has-subnav">
-            <a href="#">
-                <i class="fa fa-folder-open fa-2x"></i>
-                <span class="nav-text">
-                        Pages
-                    </span>
-            </a>
 
-        </li>
-        -->
-
-        <!--
-             <li>
-            <a href="#">
-                <i class="fa fa-bar-chart-o fa-2x"></i>
-                <span class="nav-text">
-                        Graphs and Statistics
-                    </span>
-            </a>
-        </li>
-
-         <li>
-            <a href="#">
-                <i class="fa fa-font fa-2x"></i>
-                <span class="nav-text">
-                       Quotes
-                    </span>
-            </a>
-        </li>
-
-        -->
 
 
         <li>
             <a href="#">
                 <i class="fa fa-table fa-2x"></i>
                 <span class="nav-text">
-                        Eventos
-                    </span>
+                    Eventos
+                </span>
             </a>
         </li>
 
-        <!--
-             <li>
-            <a href="#">
-                <i class="fa fa-map-marker fa-2x"></i>
-                <span class="nav-text">
-                        Maps
-                    </span>
-            </a>
-        </li>
-        -->
+
 
 
         <li>
             <a href="#">
                 <i class="fa fa-info fa-2x"></i>
                 <span class="nav-text">
-                        Ayuda
-                    </span>
+                    Ayuda
+                </span>
             </a>
         </li>
     </ul>
@@ -102,8 +58,8 @@
             <a href="#">
                 <i class="fa fa-power-off fa-2x"></i>
                 <span class="nav-text">
-                        Cerrar Sesión
-                    </span>
+                    Cerrar Sesión
+                </span>
             </a>
         </li>
     </ul>

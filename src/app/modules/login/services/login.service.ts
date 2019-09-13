@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import gql from "graphql-tag";
 import { Apollo } from 'apollo-angular';
 import { UserWeb } from '../../../models/UserWeb';
+import { DomSanitizer } from '@angular/platform-browser';
 
 const LOGIN = gql`
 query iniciarSesion($user: String!, $password: String!) {
@@ -27,7 +28,8 @@ query iniciarSesion($user: String!, $password: String!) {
 export class LoginService {
 
   constructor(
-    private apollo: Apollo
+    private apollo: Apollo,
+    private sanitized: DomSanitizer
   ) { }
 
   public async login(username: string, password: string): Promise<UserWeb> {
@@ -47,6 +49,8 @@ export class LoginService {
 
       this.LOGIN(user)
 
+
+      this.sanitized.bypassSecurityTrustHtml(user.persona.Foto)
       return user;
     } catch (error) {
       //console.log(error);

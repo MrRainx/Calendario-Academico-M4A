@@ -10,7 +10,7 @@
 
 
         <div class="col-12 col-md-4 text-center">
-            <img class="img-fluid rounded" src="data:image/jpeg;base64,{{user.persona.Foto}}" alt="">
+            <img class="img-fluid rounded" [src]="'data:image/jpeg;base64,'+ user.persona.Foto" alt="">
         </div>
 
         <div class="col-12 col-md-8">
@@ -24,8 +24,6 @@
             <h5 class="display-4">
                 {{user.persona.primerApellido}} {{user.persona.segundoApellido}}
             </h5>
-
-
 
 
         </div>

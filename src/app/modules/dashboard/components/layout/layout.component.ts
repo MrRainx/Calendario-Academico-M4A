@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Host } from '@angular/core';
 import { LoginService } from '../../../login/services/login.service';
 import { UserWeb } from '../../../../models/UserWeb';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,12 +16,13 @@ export class LayoutComponent implements OnInit {
   constructor(
 
     private loginSrv: LoginService,
-    private router: Router
+    private router: Router,
+    @Host() private app: AppComponent
   ) { }
 
   async ngOnInit() {
     this.user = this.loginSrv.getCurrentUser()
-
+    this.app.showNav = true
     console.log(this.user);
 
   }

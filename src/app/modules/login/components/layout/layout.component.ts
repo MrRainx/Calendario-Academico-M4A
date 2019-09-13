@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, Host } from '@angular/core';
 import { LoginService } from '../../services/login.service';
-import { Subscription } from 'apollo-client/util/Observable';
 import { UserWeb } from '../../../../models/UserWeb';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
-  selector: 'app-layout',
+  selector: 'app-login',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
@@ -23,14 +23,12 @@ export class LayoutComponent implements OnInit {
 
   constructor(
     private loginSrv: LoginService,
-    private router: Router
+    private router: Router,
+    @Host() private app: AppComponent
   ) { }
 
   async ngOnInit() {
-
-
-
-
+    this.app.showNav = false
   }
 
   async btnIngresar() {
