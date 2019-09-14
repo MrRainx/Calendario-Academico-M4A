@@ -1,60 +1,13 @@
-<nav class="main-menu" *ngIf="app.showNav">
+<style type="text/css">
+    .user {
+        padding: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+</style>
 
-
-
-    <ul class="mt-5">
-        <li class="has-subnav">
-            <a routerLink="/dashboard">
-                <i class="fa fa-home fa-2x"></i>
-                <span class="nav-text">
-                    Dashboard
-                </span>
-            </a>
-
-        </li>
-
-        <li class="has-subnav">
-            <a routerLink="/calendario">
-                <i class="fa fa-list fa-2x"></i>
-                <span class="nav-text">
-                    Calendario
-                </span>
-            </a>
-
-        </li>
-
-
-
-        <li>
-            <a routerLink="/eventos">
-                <i class="fa fa-table fa-2x"></i>
-                <span class="nav-text">
-                    Eventos
-                </span>
-            </a>
-        </li>
-
-
-
-
-        <li>
-            <a href="#">
-                <i class="fa fa-info fa-2x"></i>
-                <span class="nav-text">
-                    Ayuda
-                </span>
-            </a>
-        </li>
-    </ul>
-
-    <ul class="logout">
-        <li>
-            <a href="#">
-                <i class="fa fa-power-off fa-2x"></i>
-                <span class="nav-text">
-                    Cerrar Sesión
-                </span>
-            </a>
-        </li>
-    </ul>
-</nav>
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default" w3-include-html="inc/navbar.html"></nav>
+    <!-- /Static navbar -->
+</div>
