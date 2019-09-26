@@ -13,9 +13,10 @@ import { DashboardModule } from "./modules/dashboard/dashboard.module";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CalendarioModule } from './modules/calendario/calendario.module';
 import { EventosComponent } from './compnents/eventos/eventos.component';
+import { LayoutComponent } from './modules/eventos/components/layout/layout.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, EventosComponent],
+  declarations: [AppComponent, NavbarComponent, EventosComponent, LayoutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
